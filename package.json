@@ -6,7 +6,8 @@
     "start": "gulp watch"
   },
   "engines": {
-    "node": "8.10.0"
+    "node": "8.10.0",
+    "npm": "6.9.1-next.0"
   },
   "description": "A one page app landing page HTML theme for Bootstrap.",
   "keywords": [
@@ -42,7 +43,7 @@
     "jquery.easing": "^1.4.1"
   },
   "devDependencies": {
-    "browser-sync": "^2.26.7",
+    "browser-sync": "2.26.5",
     "del": "4.1.1",
     "gulp": "4.0.2",
     "gulp-autoprefixer": "6.1.0",
