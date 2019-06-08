@@ -4,8 +4,7 @@
   "version": "5.1.0",
   "scripts": {
     "start": "gulp watch",
-    "gulp" : "gulp"
-
+    "gulp": "gulp"
   },
   "engines": {
     "node": "8.10.0",
