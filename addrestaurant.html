@@ -26,7 +26,7 @@
 
   <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
 
-    <a class="navbar-brand mr-1" href="index.html">Start Bootstrap</a>
+    <a class="navbar-brand mr-1" href="index.html">Food App Admin</a>
 
     <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
       <i class="fas fa-bars"></i>
@@ -66,18 +66,18 @@
           <div class="card card-register mx-auto mt-5">
             <div class="card-header">Register a Restaurant</div>
             <div class="card-body">
-              <form>
+              <form method="post" id = "restaurantform">
                 <div class="form-group">
                   <div class="form-row">
                     <div class="col-md-6">
                       <div class="form-label-group">
-                        <input type="text" id="name" class="form-control" placeholder="First name" required="required" autofocus="autofocus">
+                        <input type="text" name= "name" id="name" class="form-control" placeholder="First name"  autofocus="autofocus" required />
                         <label for="name">Restaurant name</label>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-label-group">
-                        <input type="text" id="address" class="form-control" placeholder="Last name" required="required">
+                        <input type="text" id="address" name= "address" class="form-control" placeholder="Last name" required />
                         <label for="address">Address</label>
                       </div>
                     </div>
@@ -85,7 +85,7 @@
                 </div>
                 <div class="form-group">
                   <div class="form-label-group">
-                    <input type="email" id="neigborhood" class="form-control" placeholder="Email address" required="required">
+                    <input type="email" name= "neigborhood" id="neigborhood" class="form-control" placeholder="Email address" required />
                     <label for="neigborhood">neigborhood</label>
                   </div>
                 </div>
@@ -93,25 +93,25 @@
                   <div class="form-row">
                     <div class="col-md-6">
                       <div class="form-label-group">
-                        <input type="text" id="description" class="form-control" placeholder="Password" required="required">
+                        <input type="text" name= "description" id="description" class="form-control" placeholder="Password" required />
                         <label for="description">description</label>
                       </div>
                       <div class="form-label-group">
-                        <input type="text" id="priceLevel" class="form-control" placeholder="Confirm password" required="required">
+                        <input type="text" name= "priceLevel" id="priceLevel" class="form-control" placeholder="Confirm password" required />
                         <label for="priceLevel">price Level</label>
                       </div>
                       <div class="form-label-group">
-                        <input type="time" id="businessHours" class="form-control" placeholder="Confirm password" required="required">
+                        <input type="time" name = "businessHours" id="businessHours" class="form-control" placeholder="Confirm password" required />
                         <label for="businessHours">businessHours</label>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-label-group">
-                        <input type="number" id="coordlatitude" class="form-control" placeholder="Confirm password" required="required">
+                        <input type="number" name="coordlatitude" id="coordlatitude" class="form-control" placeholder="Confirm password" required  />
                         <label for="coordlatitude">Coord latitude</label>
                       </div>
                       <div class="form-label-group">
-                        <input type="number" id="coordAltitude" class="form-control" placeholder="Confirm password" required="required">
+                        <input type="number" name= "coordAltitude" id="coordAltitude" class="form-control" placeholder="Confirm password" required />
                         <label for="coordAltitude">Coord longitude</label>
                       </div>
 
@@ -121,20 +121,16 @@
                 </div>
                 <div class = "form-group">
                 <div class="form-label-group">
-                  <input type="url" id="backgroundimageurl" class="form-control" placeholder="Confirm password" required="required">
+                  <input type="url"  name= "backgroundimageurl" id="backgroundimageurl" class="form-control" placeholder="Confirm password" required />
                   <label for="backgroundimageurl">Background image url</label>
                 </div>
                 <div class="form-label-group">
-                  <input type="url" id="thumbnail" class="form-control" placeholder="Confirm password" required="required">
+                  <input type="url" name = "thumbnail" id="thumbnail" class="form-control" placeholder="Confirm password" required />
                   <label for="thumbnail">thumbnail</label>
                 </div>
               </div>
-                <a class="btn btn-primary btn-block" href="login.html">Register</a>
+                <input type ="submit" class="btn btn-primary btn-block" id ="addrestaurantbutton">
               </form>
-              <div class="text-center">
-                <a class="d-block small mt-3" href="login.html">Login Page</a>
-                <a class="d-block small" href="forgot-password.html">Forgot Password?</a>
-              </div>
             </div>
           </div>
         </div>
@@ -194,6 +190,10 @@
 
   <!-- Custom scripts for all pages-->
   <script src="js/sb-admin.min.js"></script>
+  <script src="js/addrestaurant.js"></script>
+  <script  src="js/jquery.serializejson.js"></script>
+
+
 
   <!-- Demo scripts for this page-->
   <script src="js/demo/datatables-demo.js"></script>
