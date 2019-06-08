@@ -24,22 +24,7 @@ const banner = ['/*!\n',
   '\n'
 ].join('');
 
-// BrowserSync
-function browserSync(done) {
-  browsersync.init({
-    server: {
-      baseDir: "./"
-    },
-    port: 3000
-  });
-  done();
-}
 
-// BrowserSync reload
-function browserSyncReload(done) {
-  browsersync.reload();
-  done();
-}
 
 // Clean vendor
 function clean() {
@@ -101,8 +86,7 @@ function css() {
       suffix: ".min"
     }))
     .pipe(cleanCSS())
-    .pipe(gulp.dest("./css"))
-    .pipe(browsersync.stream());
+    .pipe(gulp.dest("./css"));
 }
 
 // JS task
@@ -119,21 +103,20 @@ function js() {
     .pipe(rename({
       suffix: '.min'
     }))
-    .pipe(gulp.dest('./js'))
-    .pipe(browsersync.stream());
+    .pipe(gulp.dest('./js'));
 }
 
 // Watch files
 function watchFiles() {
   gulp.watch("./scss/**/*", css);
   gulp.watch("./js/**/*", js);
-  gulp.watch("./**/*.html", browserSyncReload);
+  //gulp.watch("./**/*.html", browserSyncReload);
 }
 
 // Define complex tasks
 const vendor = gulp.series(clean, modules);
 const build = gulp.series(vendor, gulp.parallel(css, js));
-const watch = gulp.series(build, gulp.parallel(watchFiles, browserSync));
+const watch = gulp.series(build, gulp.parallel(watchFiles));
 
 // Export tasks
 exports.css = css;
