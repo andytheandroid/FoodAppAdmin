@@ -1,7 +1,7 @@
 $(document).ready( function () {
 	 var table = $('#dataTable').DataTable({
 		 "ajax": {
-					 "url": "https://loginbackend.herokuapp.com/getfondas",
+					 "url": "http://localhost:8087/getfondas",
 					 "type": "POST"
 			 },
 			"sAjaxDataProp": "",
