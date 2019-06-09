@@ -1,145 +1,166 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
+  <link rel="stylesheet" type="text/css" href="dashboard.css">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 
 
-  <title>SB Admin - Dashb</title>
+  <!--Data Table-->
+  <script type="text/javascript"  src=" https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+  <script type="text/javascript"  src=" https://cdn.datatables.net/buttons/1.2.4/js/dataTables.buttons.min.js"></script>
 
-  <!-- Custom fonts for this template-->
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 
-  <!-- Page level plugin CSS-->
-  <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
 
-  <!-- Custom styles for this template-->
-  <link href="css/sb-admin.css" rel="stylesheet">
+ <script src="showRestaurants.js"></script>
 
+  <script>
+    const menuIconEl = $('.menu-icon');
+    const sidenavEl = $('.sidenav');
+    const sidenavCloseEl = $('.sidenav__close-icon');
+
+    // Add and remove provided class names
+    function toggleClassName(el, className) {
+      if (el.hasClass(className)) {
+        el.removeClass(className);
+      } else {
+        el.addClass(className);
+      }
+    }
+
+    // Open the side nav on click
+    menuIconEl.on('click', function() {
+      toggleClassName(sidenavEl, 'active');
+    });
+
+    // Close the side nav on click
+    sidenavCloseEl.on('click', function() {
+      toggleClassName(sidenavEl, 'active');
+    });
+  </script>
 </head>
+<body>
 
-<body id="page-top">
+<div class="grid">
+  <header class="header">
+    <i class="fas fa-bars header__menu"></i>
+    <div class="header__avatar">
+      <div class="dropdown">
+        <ul class="dropdown__list">
 
-  <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
-
-    <a class="navbar-brand mr-1" href="index.html">Food App</a>
-
-    <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
-      <i class="fas fa-bars"></i>
-    </button>
-
-    <!-- Navbar Search -->
-
-
-    <!-- Navbar -->
-
-
-  </nav>
-
-  <div id="wrapper">
-
-    <!-- Sidebar -->
-    <ul class="sidebar navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="index.html">
-          <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>All restaurants</span>
-        </a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="addrestaurant.html">
-          <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Add new restaurant</span>
-        </a>
-      </li>
-    </ul>
-
-    <div id="content-wrapper">
-
-      <div class="container-fluid">
-
-        <div class="card mb-3">
-          <div class="card-header">
-            <i class="fas fa-table"></i>
-            Data Table Example</div>
-          <div class="card-body">
-            <div class="table-responsive">
-              <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                <thead>
-                  <tr>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Address</th>
-                    <th>Description</th>
-                    <th>coordlatitude</th>
-                    <th>coordAltitude</th>
-                    <th>Business Hours</th>
-                    <th>neigborhood</th>
-                    <th>Background image url</th>
-                    <th>Price Level</th>
-                    <th>Thumbnail</th>
-                  </tr>
-                </thead>
-
-
-
+        </ul>
+      </div>
     </div>
-    <!-- /.content-wrapper -->
+  </header>
 
-  </div>
-  <!-- /#wrapper -->
+  <aside class="sidenav">
+    <div class="sidenav__brand">
+      <i class="fas fa-feather-alt sidenav__brand-icon"></i>
+      <a class="sidenav__brand-link" href="#">Food<span class="text-light">App Admin</span></a>
+      <i class="fas fa-times sidenav__brand-close"></i>
+    </div>
+    <div class="row row--align-v-center row--align-h-center">
+      <ul class="navList">
+        <li class="navList__heading">Show all restaurants<i class="far fa-file-alt"></i></li>
+        <li class="navList__heading">Add new restaurant<i class="far fa-file-alt"></i></li>
 
-  <!-- Scroll to Top Button-->
-  <a class="scroll-to-top rounded" href="#page-top">
-    <i class="fas fa-angle-up"></i>
-  </a>
+        </ul>
+    </div>
+  </aside>
 
-  <!-- Logout Modal-->
-  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">×</span>
-          </button>
+  <main class="main">
+    <div class="main-header">
+      <div class="main-header__intro-wrapper">
+        <div class="main-header__welcome">
+          <div class="main-header__welcome-title text-light">Welcome, <strong></strong></div>
+          <div class="main-header__welcome-subtitle text-light"></div>
         </div>
-        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-        <div class="modal-footer">
-          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn btn-primary" href="login.html">Logout</a>
+        <div class="quickview">
+          <div class="quickview__item">
+            <div class="quickview__item-total">41</div>
+            <div class="quickview__item-description">
+              <i class="far fa-calendar-alt"></i>
+              <span class="text-light">Events</span>
+            </div>
+          </div>
+          <div class="quickview__item">
+            <div class="quickview__item-total">64</div>
+            <div class="quickview__item-description">
+              <i class="far fa-comment"></i>
+              <span class="text-light">Messages</span>
+            </div>
+          </div>
+          <div class="quickview__item">
+            <div class="quickview__item-total">27&deg;</div>
+            <div class="quickview__item-description">
+              <i class="fas fa-map-marker-alt"></i>
+              <span class="text-light">Austin</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+    <div class="main-overview">
+      <div class="overviewCard">
+        <div class="overviewCard-icon overviewCard-icon--document">
+           <i class="far fa-file-alt"></i>
+        </div>
+        <div class="overviewCard-description">
+          <h3 class="overviewCard-title text-light">New <strong>Document</strong></h3>
+          <p class="overviewCard-subtitle">Europe Trip</p>
+        </div>
+      </div>
+      <div class="overviewCard">
+        <div class="overviewCard-icon overviewCard-icon--calendar">
+           <i class="far fa-calendar-check"></i>
+        </div>
+        <div class="overviewCard-description">
+          <h3 class="overviewCard-title text-light">Upcoming <strong>Event</strong></h3>
+          <p class="overviewCard-subtitle">Chili Cookoff</p>
+        </div>
+      </div>
+      <div class="overviewCard">
+        <div class="overviewCard-icon overviewCard-icon--mail">
+           <i class="far fa-envelope"></i>
+        </div>
+        <div class="overviewCard-description">
+          <h3 class="overviewCard-title text-light">Recent <strong>Emails</strong></h3>
+          <p class="overviewCard-subtitle">+10</p>
+        </div>
+      </div>
+      <div class="overviewCard">
+        <div class="overviewCard-icon overviewCard-icon--photo">
+           <i class="far fa-file-image"></i>
+        </div>
+        <div class="overviewCard-description">
+          <h3 class="overviewCard-title text-light">New <strong>Album</strong></h3>
+          <p class="overviewCard-subtitle">House Concert</p>
+        </div>
+      </div>
+    </div> <!-- /.main__overview -->
+          <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                 <thead>
+                   <tr>
+                     <th>ID</th>
+                     <th>Name</th>
+                     <th>Address</th>
+                     <th>Description</th>
+                     <th>coordlatitude</th>
+                     <th>coordAltitude</th>
+                     <th>Business Hours</th>
+                     <th>neigborhood</th>
+                     <th>Background image url</th>
+                     <th>Price Level</th>
+                     <th>Thumbnail</th>
+                   </tr>
+                 </thead>
+               </table>
 
-  <!-- Bootstrap core JavaScript-->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  </main>
 
-  <!-- Core plugin JavaScript-->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-  <!-- Page level plugin JavaScript-->
-  <script src="vendor/chart.js/Chart.min.js"></script>
-  <script src="vendor/datatables/jquery.dataTables.js"></script>
-  <script src="vendor/datatables/dataTables.bootstrap4.js"></script>
-
-  <!-- Custom scripts for all pages-->
-  <script src="js/sb-admin.min.js"></script>
-  <script src="js/table.js"></script>
-
-
-  <!-- Demo scripts for this page-->
-  <script src="js/demo/datatables-demo.js"></script>
-  <script src="js/demo/chart-area-demo.js"></script>
-
-
+  <footer class="footer">
+    <p><span class="footer__copyright">&copy;</span> 2018 MTH</p>
+    <p>Crafted with <i class="fas fa-heart footer__icon"></i> by <a href="https://www.linkedin.com/in/matt-holland/" target="_blank" class="footer__signature">Matt H</a></p>
+  </footer>
+</div>
 </body>
-
 </html>
