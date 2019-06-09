@@ -6,6 +6,9 @@ html, body {
 }
 a {
   text-decoration: none;
+  color: rgba(255, 255, 255, 1.0);
+
+
 }
 .text-light {
   font-weight: 300;
@@ -212,7 +215,7 @@ a {
   align-items: center;
   justify-content: space-between;
   padding: 16px 16px 3px;
-  color: rgba(255, 255, 255, .5);
+  color: rgba(255, 255, 255, 1.0);
   text-transform: uppercase;
   font-size: 15px;
 }
@@ -301,7 +304,7 @@ a {
   height: 250px;
   color: #fff;
   background-size: cover;
-  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1609106/lake-shadow-water.jpg");
+  background-image: url("https://cdn-3.expansion.mx/dims4/default/01d4259/2147483647/strip/true/crop/659x462+0+0/resize/800x561!/quality/90/?url=https%3A%2F%2Fcdn-3.expansion.mx%2Fdb%2Fdbf1446c85fabec0927577fc1a27d598%2Fcdmx-reforma20180516134246.jpg");
   margin-bottom: 20px;
 }
 .main-header__intro-wrapper {
@@ -658,5 +661,140 @@ a {
   }
   .main-header__welcome {
     align-items: flex-start;
+  }
+}
+
+
+/* info (hed, dek, source, credit) */
+.rg-container {
+font-family: 'Lato', Helvetica, Arial, sans-serif;
+font-size: 16px;
+line-height: 1.4;
+margin: 0;
+padding: 1em 0.5em;
+color: #222;
+}
+.rg-header {
+margin-bottom: 1em;
+text-align: left;
+}
+
+.rg-header > * {
+display: block;
+}
+.rg-hed {
+font-weight: bold;
+font-size: 1.4em;
+}
+.rg-dek {
+font-size: 1em;
+}
+
+.rg-source {
+margin: 0;
+font-size: 0.75em;
+text-align: right;
+}
+.rg-source .pre-colon {
+text-transform: uppercase;
+}
+
+.rg-source .post-colon {
+font-weight: bold;
+}
+
+/* table */
+table.rg-table {
+width: 60%;
+margin-bottom: 0.5em;
+font-size: 1em;
+border-collapse: collapse;
+border-spacing: 0;
+}
+table.rg-table tr {
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+border: 0;
+font-size: 100%;
+font: inherit;
+vertical-align: baseline;
+text-align: left;
+color: #333;
+}
+table.rg-table thead {
+border-bottom: 3px solid #ddd;
+}
+table.rg-table tr {
+border-bottom: 1px solid #ddd;
+color: #222;
+}
+table.rg-table tr.highlight {
+background-color: #dcf1f0 !important;
+}
+table.rg-table.zebra tr:nth-child(even) {
+background-color: #f6f6f6;
+}
+table.rg-table th {
+font-weight: bold;
+padding: 0.35em;
+font-size: 0.9em;
+}
+table.rg-table td {
+padding: 0.35em;
+font-size: 0.9em;
+}
+table.rg-table .highlight td {
+font-weight: bold;
+}
+table.rg-table th.number,
+td.number {
+text-align: right;
+}
+
+/* media queries */
+@media screen and (max-width: 600px) {
+
+}
+
+@media
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr {
+		display: block;
+	}
+
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr {
+		position: absolute;
+    display:  none;
+  	}
+
+	tr { border: 1px solid #ccc; }
+
+	td {
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee;
+		position: relative;
+		padding-left: 5%;
+	}
+
+
+	td:before {
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%;
+		padding-right: 10px;
+		white-space: nowrap;
+	}
+  table.rg-table.zebra tr:nth-child(even) {
+  background-color: #f6f6f6;
   }
 }

@@ -8,17 +8,13 @@ $(document).ready( function () {
       "crossDomain": true,
 			"order": [[ 0, "asc" ]],
 			"aoColumns": [
-			    { "mData": "id"},
 		      { "mData": "name" },
 				  { "mData": "address" },
-					{ "mData": "description" },
 				  { "mData": "coordlatitude" },
 				  { "mData": "coordAltitude" },
 				  { "mData": "businessHours" },
           { "mData": "neigborhood" },
-          { "mData": "backgroundimageurl" },
-          { "mData": "priceLevel" },
-          { "mData": "thumbnail" }
+          { "mData": "priceLevel" }
 
 
 			]

@@ -2,6 +2,7 @@
 <html>
 <head>
   <link rel="stylesheet" type="text/css" href="dashboard.css">
+  <link rel = "stylesheet" type ="text/css" href = "dashboard.css">
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 
 
@@ -60,8 +61,8 @@
     </div>
     <div class="row row--align-v-center row--align-h-center">
       <ul class="navList">
-        <li class="navList__heading">Show all restaurants<i class="far fa-file-alt"></i></li>
-        <li class="navList__heading">Add new restaurant<i class="far fa-file-alt"></i></li>
+        <li class="navList__heading"><a href = "index.html">Show all restaurants<i class="far fa-file-alt"></i></a></li>
+        <li class="navList__heading"><a href = "addrestaurant.html">Add new restaurant<i class="far fa-file-alt"></a></i></li>
 
         </ul>
     </div>
@@ -71,95 +72,49 @@
     <div class="main-header">
       <div class="main-header__intro-wrapper">
         <div class="main-header__welcome">
-          <div class="main-header__welcome-title text-light">Welcome, <strong></strong></div>
+          <div class="main-header__welcome-title text-light">Welcome <strong> User Name</strong></div>
           <div class="main-header__welcome-subtitle text-light"></div>
         </div>
         <div class="quickview">
-          <div class="quickview__item">
-            <div class="quickview__item-total">41</div>
-            <div class="quickview__item-description">
-              <i class="far fa-calendar-alt"></i>
-              <span class="text-light">Events</span>
-            </div>
-          </div>
-          <div class="quickview__item">
-            <div class="quickview__item-total">64</div>
-            <div class="quickview__item-description">
-              <i class="far fa-comment"></i>
-              <span class="text-light">Messages</span>
-            </div>
-          </div>
-          <div class="quickview__item">
-            <div class="quickview__item-total">27&deg;</div>
-            <div class="quickview__item-description">
-              <i class="fas fa-map-marker-alt"></i>
-              <span class="text-light">Austin</span>
-            </div>
-          </div>
         </div>
       </div>
     </div>
     <div class="main-overview">
-      <div class="overviewCard">
-        <div class="overviewCard-icon overviewCard-icon--document">
-           <i class="far fa-file-alt"></i>
-        </div>
-        <div class="overviewCard-description">
-          <h3 class="overviewCard-title text-light">New <strong>Document</strong></h3>
-          <p class="overviewCard-subtitle">Europe Trip</p>
-        </div>
-      </div>
-      <div class="overviewCard">
-        <div class="overviewCard-icon overviewCard-icon--calendar">
-           <i class="far fa-calendar-check"></i>
-        </div>
-        <div class="overviewCard-description">
-          <h3 class="overviewCard-title text-light">Upcoming <strong>Event</strong></h3>
-          <p class="overviewCard-subtitle">Chili Cookoff</p>
-        </div>
-      </div>
-      <div class="overviewCard">
-        <div class="overviewCard-icon overviewCard-icon--mail">
-           <i class="far fa-envelope"></i>
-        </div>
-        <div class="overviewCard-description">
-          <h3 class="overviewCard-title text-light">Recent <strong>Emails</strong></h3>
-          <p class="overviewCard-subtitle">+10</p>
-        </div>
-      </div>
-      <div class="overviewCard">
-        <div class="overviewCard-icon overviewCard-icon--photo">
-           <i class="far fa-file-image"></i>
-        </div>
-        <div class="overviewCard-description">
-          <h3 class="overviewCard-title text-light">New <strong>Album</strong></h3>
-          <p class="overviewCard-subtitle">House Concert</p>
-        </div>
-      </div>
-    </div> <!-- /.main__overview -->
-          <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                 <thead>
-                   <tr>
-                     <th>ID</th>
-                     <th>Name</th>
-                     <th>Address</th>
-                     <th>Description</th>
-                     <th>coordlatitude</th>
-                     <th>coordAltitude</th>
-                     <th>Business Hours</th>
-                     <th>neigborhood</th>
-                     <th>Background image url</th>
-                     <th>Price Level</th>
-                     <th>Thumbnail</th>
-                   </tr>
-                 </thead>
-               </table>
 
+    </div> <!-- /.main__overview -->
+    <div class='rg-container'>
+<table class='rg-table zebra' summary='Restaurants' id = "dataTable">
+<caption class='rg-header'>
+  <span class='rg-hed'>List of restaurants</span>
+</caption>
+<thead>
+  <tr>
+    <th class='text '>Name</th>
+    <th class='text '>Address</th>
+    <th class='number'>coordlatitude</th>
+    <th class='number'>coordLongitude</th>
+    <th class='text'>Business Hours</th>
+    <th class='text'>neigborhood</th>
+    <th class='text'>price Level</th>
+
+
+
+  </tr>
+</thead>
+<tbody>
+
+
+
+</tbody>
+</table>
+<div class='rg-source'>
+<span class='pre-colon'>SOURCE</span>: <span class='post-colon'>Sources</span>
+</div>
+</div>
   </main>
 
   <footer class="footer">
-    <p><span class="footer__copyright">&copy;</span> 2018 MTH</p>
-    <p>Crafted with <i class="fas fa-heart footer__icon"></i> by <a href="https://www.linkedin.com/in/matt-holland/" target="_blank" class="footer__signature">Matt H</a></p>
+    <p><span class="footer__copyright">&copy;</span> 2019</p>
   </footer>
 </div>
 </body>
