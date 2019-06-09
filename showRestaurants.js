@@ -5,6 +5,7 @@ $(document).ready( function () {
 					 "type": "POST"
 			 },
 			"sAjaxDataProp": "",
+      "crossDomain": true,
 			"order": [[ 0, "asc" ]],
 			"aoColumns": [
 			    { "mData": "id"},
