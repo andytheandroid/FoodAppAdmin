@@ -39,10 +39,9 @@ position:absolute;
 
     <!-- Navbar -->
     <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
-      <div class="container-fluid">
 
         <!-- Brand -->
-        <a class="navbar-brand waves-effect" href="https://mdbootstrap.com/docs/jquery/" target="_blank">
+        <a class="navbar-brand waves-effect"  target="_blank">
           <strong class="blue-text">Food App Admin</strong>
         </a>
 
@@ -54,158 +53,206 @@ position:absolute;
 
         <!-- Links -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
           <!-- Left -->
-          <ul class="navbar-nav mr-auto">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a href="dashboard.html" class="list-group-item active waves-effect">
+              <i class="fas fa-chart-pie mr-3"></i>All Restaurants
 
-          </ul>
+            </a>
+          </li>&nbsp;
+          <li class="nav-item">
+            <a href="addrestaurants.html" class="list-group-item active waves-effect">
+              <i class="fas fa-chart-pie mr-3"></i>New restaurant
+            </a>
+          </li>&nbsp;
+          <li class="nav-item">
+            <a href="index.html" class="list-group-item active waves-effect">
+              <i class="fas fa-chart-pie mr-3"></i>All Restaurants
+            </a>
+          </li>&nbsp;
 
-          <!-- Right -->
-          <ul class="navbar-nav nav-flex-icons">
+        </ul>
 
-          </ul>
+        <!-- Right -->
+        <ul class="navbar-nav nav-flex-icons">
+
+        </ul>
 
         </div>
 
-      </div>
     </nav>
-    <!-- Navbar -->
-
-    <!-- Sidebar -->
-    <div class="sidebar-fixed position-fixed">
-
-      <a class="logo-wrapper waves-effect">
-
-      </a>
-
-      <div class="list-group list-group-flush">
-        <a href="dashboard.html" class="list-group-item active waves-effect">
-          <i class="fas fa-chart-pie mr-3"></i>All Restaurants
-        </a>
-      </div><br>
-      <div class="list-group list-group-flush">
-        <a href="addrestaurants.html" class="list-group-item active waves-effect">
-          <i class="fas fa-chart-pie mr-3"></i> Add restaurants
-        </a><br>
-      </div>
-      <div class="list-group list-group-flush">
-        <a href="#" class="list-group-item active waves-effect">
-          <i class="fas fa-chart-pie mr-3"></i> Show comments
-        </a><br>
-      </div>
-
-    </div>
     <!-- Sidebar -->
 
   </header>
   <!--Main Navigation-->
 
   <!--Main layout-->
-  <main class="pt-5 mx-lg-5">
+<!--
+  <center>
+<div style = "width: 50%" class = "pt-1">
+      <form  id= "form" name = "form">
+        <label class="control-label requiredField" for="name">
+         Name
+         <span class="asteriskField">
+          *
+         </span>
+        </label>
+        <input class="form-control" id="name" name="name" type="text" required = true/>
+        <label class="control-label requiredField" for="address">
+         Address
+         <span class="asteriskField">
+          *
+         </span>
+        </label>
+        <input class="form-control" id="email" name="address" type="text" required/>
+        <label class="control-label requiredField" for="neigborhood">
+         Neighborhood
+         <span class="asteriskField">
+          *
+         </span>
+        </label>
+        <input class="form-control" id="subject" name="neighborhood" type="text" required/>
+        <label class="control-label requiredField" for="priceLevel">
+         Price level
+         <span class="asteriskField">
+          *
+         </span>
+        </label>
+        <input class="form-control" id="name1" name="priceLevel" type="text"  required/>
+        <label class="control-label requiredField" for="coordlatitude">
+         coordLatitude
+         <span class="asteriskField">
+          *
+         </span>
+        </label>
+        <input class="form-control" id="name2" name="coordlatitude" type="text"  required/>
+        <label class="control-label requiredField" for="coordAltitude">
+         coordAltitude
+         <span class="asteriskField">
+          *
+         </span>
+        </label>
+        <input class="form-control" id="name3" name="coordAltitude" type="text"  required/>
+        <label class="control-label requiredField" for="thumbnail">
+         thumbnail
+         <span class="asteriskField">
+          *
+         </span>
+        </label>
+        <input class="form-control" id="name4" name="thumbnail" type="text"  required/>
+        <label class="control-label requiredField" for="backgroundimageurl">
+         backgroundimageurl
+         <span class="asteriskField">
+          *
+         </span>
+        </label>
+        <input class="form-control" id="name5" name="backgroundimageurl" type="text"  required/>
+        <label class="control-label requiredField" for="description">
+         Description
+         <span class="asteriskField">
+          *
+         </span>
+        </label>
+        <input class="form-control" id="name5" name="description" type="text"  required/>
+
+         <button class="btn btn-primary" id = "addrestaurantbutton" name="submit">
+          Submit
+         </button>
+      </form>
+</div>
+</center> -->
+
+<main class="pt-5 mx-lg-5">
     <div class="container-fluid mt-5">
 
-      <!-- Heading -->
-      <div class="card mb-4 wow fadeIn">
+<center>
+<!-- Material form register -->
+<div class="card">
 
-        <div class="bootstrap-iso">
-           <div class="container-fluid">
-            <div class="row">
-             <div class="col-md-6 col-sm-6 col-xs-12">
-              <form  id= "form" name = "form">
-               <div class="form-group ">
-                <label class="control-label requiredField" for="name">
-                 Name
-                 <span class="asteriskField">
-                  *
-                 </span>
-                </label>
-                <input class="form-control" id="name" name="name" type="text" required = true/>
-               </div>
-               <div class="form-group ">
-                <label class="control-label requiredField" for="address">
-                 Address
-                 <span class="asteriskField">
-                  *
-                 </span>
-                </label>
-                <input class="form-control" id="email" name="address" type="text" required/>
-               </div>
-               <div class="form-group ">
-                <label class="control-label requiredField" for="neigborhood">
-                 Neighborhood
-                 <span class="asteriskField">
-                  *
-                 </span>
-                </label>
-                <input class="form-control" id="subject" name="neighborhood" type="text" required/>
-               </div>
-               <div class="form-group ">
-                <label class="control-label requiredField" for="priceLevel">
-                 Price level
-                 <span class="asteriskField">
-                  *
-                 </span>
-                </label>
-                <input class="form-control" id="name1" name="priceLevel" type="text"  required/>
-               </div>
-               <div class="form-group ">
-                <label class="control-label requiredField" for="coordlatitude">
-                 coordLatitude
-                 <span class="asteriskField">
-                  *
-                 </span>
-                </label>
-                <input class="form-control" id="name2" name="coordlatitude" type="text"  required/>
-               </div>
-               <div class="form-group ">
-                <label class="control-label requiredField" for="coordAltitude">
-                 coordAltitude
-                 <span class="asteriskField">
-                  *
-                 </span>
-                </label>
-                <input class="form-control" id="name3" name="coordAltitude" type="text"  required/>
-               </div>
-               <div class="form-group ">
-                <label class="control-label requiredField" for="thumbnail">
-                 thumbnail
-                 <span class="asteriskField">
-                  *
-                 </span>
-                </label>
-                <input class="form-control" id="name4" name="thumbnail" type="text"  required/>
-               </div>
-               <div class="form-group ">
-                <label class="control-label requiredField" for="backgroundimageurl">
-                 backgroundimageurl
-                 <span class="asteriskField">
-                  *
-                 </span>
-                </label>
-                <input class="form-control" id="name5" name="backgroundimageurl" type="text"  required/>
-               </div>
-               <div class="form-group ">
-                <label class="control-label requiredField" for="description">
-                 Description
-                 <span class="asteriskField">
-                  *
-                 </span>
-                </label>
-                <input class="form-control" id="name5" name="description" type="text"  required/>
+    <h5 class="card-header info-color white-text text-center py-4">
+        <strong>New Restaurant</strong>
+    </h5>
 
-               </div>
-               <div class="form-group">
-                <div>
-                 <button class="btn btn-primary" id = "addrestaurantbutton" name="submit">
-                  Submit
-                 </button>
+    <!--Card content-->
+    <div class="card-body px-lg-5 pt-0">
+
+        <!-- Form -->
+        <form class="text-center" style="color: #757575;" id = "newRestaurantForm" method="post">
+
+            <div class="form-row">
+                <div class="col">
+                    <div class="md-form">
+                        <input type="text" id="Name" class="form-control" name = "name" required>
+                        <label for="materialRegisterFormFirstName">Name</label>
+                    </div>
                 </div>
-               </div>
-              </form>
-             </div>
+                <div class="col">
+                    <div class="md-form">
+                        <input type="text" id="address" class="form-control" name = "address" required>
+                        <label for="materialRegisterFormLastName">Address</label>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="md-form">
+                        <input type="text" id="address" class="form-control" name = "priceLevel" required>
+                        <label for="materialRegisterFormLastName">Price Level</label>
+                    </div>
+                </div>
             </div>
-           </div>
-          </div>
+
+            <div class="md-form mt-0">
+                <input type="text" id="neighborhood" class="form-control" name = "neighborhood" required>
+                <label for="materialRegisterFormEmail">Neighborhood</label>
+            </div>
+
+            <div class="md-form">
+                <input type="text" id="businesshours" class="form-control" name = "businesshours" required>
+                <label for="materialRegisterFormPassword">Business Hours</label>
+
+            </div>
+
+            <div class="md-form">
+                <input type="number"  step="0.000001"id="materialRegisterFormPhone" class="form-control" name = "coordlatitude" required>
+                <label for="materialRegisterFormPhone">Coordinate Latitude</label>
+            </div>
+
+            <div class="md-form">
+                <input type="number" step="0.00000001" id="materialRegisterFormPhone" class="form-control" name = "coordLatitude" required>
+                <label for="materialRegisterFormPhone">Coordinate Latitude</label>
+            </div>
+
+            <div class="md-form">
+                <input type="text"  id="materialRegisterFormPhone" class="form-control" name = "description" required>
+                <label for="materialRegisterFormPhone">Description of the place</label>
+            </div>
+
+            <div class="md-form">
+                <input type="url" id="materialRegisterFormPhone" class="form-control" name = "backgroundimageurl" required>
+                <label for="materialRegisterFormPhone">Image Url</label>
+            </div>
+
+            <div class="md-form">
+                <input type="url" id="materialRegisterFormPhone" class="form-control" name = "thumbnail" required>
+                <label for="materialRegisterFormPhone">Thumbnail url</label>
+            </div>
+
+            <!-- Sign up button -->
+            <input class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit" id="addNewButton" value = "Add Restaurant">
+
+
+
+
+        </form>
+        <!-- Form -->
+
+    </div>
+
+</div>
+</div>
+</center>
+</main>
+      <!-- Heading -->
 
       <!--Grid row-->
 
@@ -224,7 +271,6 @@ position:absolute;
         <!--Grid column-->
 
 
-  </main>
   <!--Main layout-->
 
 
@@ -238,9 +284,8 @@ position:absolute;
   <!-- Bootstrap core JavaScript -->
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <script type="text/javascript" src="js/addrestaurant.js"></script>
-  <!--Data Table-->
-<script type="text/javascript"  src=" https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
-<script type="text/javascript"  src=" https://cdn.datatables.net/buttons/1.2.4/js/dataTables.buttons.min.js"></script>
+  <script type="text/javascript" src="js/jsonserialization.js"></script>
+
 
 
 

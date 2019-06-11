@@ -1,20 +1,23 @@
-$(document).ready(function(){
-         $("#addrestaurantbutton").click( function()
+
+         $("#newRestaurantForm").submit(function( event )
            {
              var obj = $('form').serializeJSON();
              var formData = JSON.stringify(obj);
-
-            alert(formData);
+             console.log(formData);
 
             $.ajax({
         type: 'POST',
         url: 'https://loginbackend.herokuapp.com/addfondas',
-        dataType: 'json',
+        dataType: 'text',
         data: formData,
         contentType : 'application/json',
         success: function(data) {
-            alert(data)
+            alert("Registered sucessfully");
+            window.location.replace("dashboard.html");
+
         }
     });
+
+    event.preventDefault();
+
            });
-    });
