@@ -18,13 +18,11 @@ $(document).ready( function () {
 
   //Dessert
     $.ajax({
-               type: "GET", //rest Type
-               dataType: 'json',
+               type: "POST", //rest Type
+               dataType: 'jsonp',
                url: "https://www.themealdb.com/api/json/v1/1/filter.php?c=dessert",
                async: false,
-               contentType: "application/json; charset=utf-8",
                headers: {
-                 "accept": "application/json",
               "Access-Control-Allow-Origin":"*"
     },
                success: function (msg) {
@@ -36,13 +34,12 @@ $(document).ready( function () {
 
     //Main dish
       $.ajax({
-                 type: "GET", //rest Type
-                 dataType: 'json',
+                 type: "POST", //rest Type
+                 dataType: 'jsonp',
                  url: "https://www.themealdb.com/api/json/v1/1/filter.php?c=beef",
                  async: false,
-                 contentType: "application/json; charset=utf-8",
                  headers: {
-                   "accept": "application/json",
+                
                 "Access-Control-Allow-Origin":"*"
       },
 
