@@ -2,7 +2,7 @@ $(document).ready( function () {
 
 
   $.ajax({
-             type: "POST", //rest Type
+             type: "POST",
              dataType: 'json',
              url: "https://loginbackend.herokuapp.com/getfondas",
              async: false,
@@ -18,11 +18,14 @@ $(document).ready( function () {
 
   //Dessert
     $.ajax({
-               type: "POST", //rest Type
-               dataType: 'jsonp',
+               type: "POST",
+               dataType: 'json',
                url: "https://www.themealdb.com/api/json/v1/1/filter.php?c=dessert",
                async: false,
+               contentType: "application/json; charset=utf-8",
+               mode: 'cors',
                headers: {
+                 "accept": "application/json",
               "Access-Control-Allow-Origin":"*"
     },
                success: function (msg) {
@@ -34,12 +37,14 @@ $(document).ready( function () {
 
     //Main dish
       $.ajax({
-                 type: "POST", //rest Type
-                 dataType: 'jsonp',
+                 type: "POST",
+                 dataType: 'json',
                  url: "https://www.themealdb.com/api/json/v1/1/filter.php?c=beef",
                  async: false,
+                 mode: 'cors',
+                 contentType: "application/json; charset=utf-8",
                  headers: {
-                
+                   "accept": "application/json",
                 "Access-Control-Allow-Origin":"*"
       },
 
