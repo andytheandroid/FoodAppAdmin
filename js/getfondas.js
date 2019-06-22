@@ -4,7 +4,7 @@ $(document).ready( function () {
   $.ajax({
              type: "POST", //rest Type
              dataType: 'json',
-             url: "https://loginbackend.herokuapp.com/getfondas",
+             url: "https://loginbackend.herokuapp.com/getRestaurants",
              async: false,
              contentType: "application/json; charset=utf-8",
              success: function (msg) {

@@ -20,7 +20,7 @@ $(document).ready( function () {
     $.ajax({
                type: "POST",
                dataType: 'json',
-               url: "https://www.themealdb.com/api/json/v1/1/filter.php?c=dessert",
+               url: "http://localhost:8089/getMainDishes",
                async: false,
                contentType: "application/json; charset=utf-8",
                mode: 'cors',
